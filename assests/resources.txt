@@ -1,0 +1,2 @@
+SpurlyAppIcon.png
+SpurlyAppBanner.png
