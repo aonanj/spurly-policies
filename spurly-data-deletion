@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spurly – Privacy Policy</title>
+  <style>
+    :root {
+      --bg-primary: #F0F4F8;
+      --bg-secondary: #BCCCDC;
+      --text-primary: #102A43;
+      --text-secondary: #627D98;
+      --brand: #3A506B;
+      --highlight: #9BC8FF;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: var(--bg-secondary);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      object-fit: contain;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    main h1 {
+      color: var(--brand);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    main h2 {
+      color: var(--brand);
+      margin-top: 1.5rem;
+    }
+    main ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: var(--bg-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      color: var(--text-secondary);
+    }
+    footer img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: var(--brand);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="SpurlyAppBanner.png" alt="Spurly banner logo" />
+  </header>
+  <main>
+    <h1>Spurly Data Deletion Policy and Procedure</h1>
+    <p><strong>Effective Date:</strong> May 28, 2025</p>
+
+    <h2>To request the deletion of your data from spurly, please follow these steps:</h2>
+    <ol>
+      <li>Send an email to <a href="mailto:admin@spurly.io">admin@spurly.io</a>.</li>
+      <li>Use the subject line: "Data Deletion Request".</li>
+      <li>In the body of the email, please include your name and email address associated with your spurly account.</li>
+      <li>If you use a third-party provider to sign on to spurly, please identify that provider: Apple, Google, or Facebook.</li>
+    </ol>
+    <p>We will process your request and delete all of your user data from our systems within 30 days. You will receive a confirmation email once the deletion is complete.</p>
+    <p>Failure to follow these instructions or provide accurate and complete information allowing us to identify your account may prevent the deletion of your data as requested.</p>
+    <p>We are not responsible for informing you of any omission, error, or other failure to follow these instructions that could prevent the deletion of your data.</p>
+    
+    <h3>Updates to this Policy and Procedure document</h3>
+    <p>This Policy may be updated periodically and without notice.</p>
+    
+    <h3>Contact Us</h3>
+    <p>For questions or concerns regarding this Policy, please contact us at (a href="mailto:admin@spurly.io">admin@spurly.io</a>.</p>
+  </main>
+  <footer>
+    <!-- Replace 'assets/logo.png' with the actual path to your small app logo in the repo -->
+    <img src="SpurlyAppIcon.png" alt="Spurly app logo" />
+    <span>&copy; <span id="year"></span> spurly. phaeton order llc. all rights reserved.</span>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
