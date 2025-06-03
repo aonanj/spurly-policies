@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Token Test</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <h1>Firebase ID Token Retriever</h1>
+    <button onclick="signInTestUser()">Sign In Test User & Get Token</button>
+    <p>ID Token: <pre id="idToken"></pre></p>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBplwCXVW-MY4iSqvVYMJ3zLj7cwbu-Zxo",
+            authDomain: "boreal-sweep-455716-a5.firebaseapp.com",
+            projectId: "boreal-sweep-455716-a5",
+            storageBucket: "boreal-sweep-455716-a5.firebasestorage.app",
+            messagingSenderId: "280376325694",
+            appId: "1:280376325694:web:d75afa5375e9c8c68c836f"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        async function signInTestUser() {
+            const email = "aonanj@icloud.com"; // Use an email for a test user
+            const password = "8238WManchester";   // Use the password for the test user
+
+            try {
+                // Try to sign in. If the user doesn't exist and you're using email/password,
+                // you might need to create them first via the Firebase console or another script.
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                const user = userCredential.user;
+                console.log("User signed in:", user);
+
+                // Get the ID token
+                const idToken = await user.getIdToken();
+                console.log("Firebase ID Token:", idToken);
+                document.getElementById("idToken").textContent = idToken;
+
+            } catch (error) {
+                console.error("Error signing in or getting token:", error);
+                document.getElementById("idToken").textContent = "Error: " + error.message;
+                // If user not found, you might want to sign them up first for testing:
+                // if (error.code === 'auth/user-not-found') {
+                //    const newUserCredential = await auth.createUserWithEmailAndPassword(email, password);
+                //    const newUser = newUserCredential.user;
+                //    const idToken = await newUser.getIdToken();
+                //    document.getElementById("idToken").textContent = idToken;
+                // }
+            }
+        }
+    </script>
+</body>
+</html>
